@@ -1,0 +1,53 @@
+# A basic .muttrc for use with Gmail
+
+# Change the following six lines to match your Gmail account details
+#source "gpg -d ~/.mutt/passwords.gpg |
+#set imap_user = "email@addr.com"
+#set smtp_url = "smtp://email@addr.com:587/"
+#set from = "email@addr.com"
+#set realname = "Heedong Goh"
+source ~/.mutt/gmailaddr
+
+# Change the following line to a different editor you prefer.
+set editor = "emacs -nw"
+
+# Basic config, you can leave this as is
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set move = no
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+auto_view text/html # view html automatically
+alternative_order text/plain text/enriched text/html # prefer plain text
+#alternative_order text/plain text/html *
+# run viewer defined in mailcap by <return> in attach view
+#bind attach <return> view-mailcap
+bind editor <Tab> complete-query
+bind editor ^T complete
+bind editor <space> noop
+
+# Gmail-style keyboard shortcuts
+#macro index,pager y "unset trash\n " "Gmail archive message"
+#macro index,pager d "set trash=\"imaps://imap.googlemail.com/[Gmail]/trash\"\n " "Gmail delete message"
+#macro index,pager gi "=INBOX" "Go to inbox"
+#macro index,pager ga "=[Gmail]/All Mail" "Go to all mail"
+#macro index,pager gs "=[Gmail]/Starred" "Go to starred messages"
+#macro index,pager gd "=[Gmail]/Drafts" "Go to drafts"
+
+#end-----------------------------------------
