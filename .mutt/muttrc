@@ -42,12 +42,10 @@ bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop
 
-# Gmail-style keyboard shortcuts
-#macro index,pager y "unset trash\n " "Gmail archive message"
-#macro index,pager d "set trash=\"imaps://imap.googlemail.com/[Gmail]/trash\"\n " "Gmail delete message"
-#macro index,pager gi "=INBOX" "Go to inbox"
-#macro index,pager ga "=[Gmail]/All Mail" "Go to all mail"
-#macro index,pager gs "=[Gmail]/Starred" "Go to starred messages"
-#macro index,pager gd "=[Gmail]/Drafts" "Go to drafts"
-
-#end-----------------------------------------
+# Gmail keyboard shortcuts (https://dev.mutt.org/trac/wiki/UseCases/Gmail)
+#macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"
+#macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "Trash"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to sent mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
