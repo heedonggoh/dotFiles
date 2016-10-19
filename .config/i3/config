@@ -191,9 +191,10 @@ urgent_workspace   $base01 $base01    $base08
 
 # Keyboard short cut
 bindsym $mod+i exec /opt/google/chrome/google-chrome
+bindsym $mod+Shift+i exec /opt/google/chrome/google-chrome --incognito
 bindsym $mod+Shift+p exec i3lock -c 000000 -n
 bindsym $mod+n exec nautilus
-bindsym $mod+Shift+i exec redshift -t 3700:3700 # -g 0.5
+bindsym $mod+Shift+y exec redshift -t 3700:3700 # -g 0.5
 bindsym $mod+Shift+u exec pkill redshift
 
 # Start-Up Program

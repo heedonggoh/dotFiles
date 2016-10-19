@@ -22,6 +22,7 @@ alias em='emacs -nw --color=no'
 alias mat='matlab -nojvm'
 alias mendeley='/opt/mendeleyDesktop/bin/mendeleydesktop'
 alias chrome='/opt/google/chrome/google-chrome'
+alias ichrome='/opt/google/chrome/google-chrome --incognito'
 alias cmat='/opt/cmatrix-1.2a/cmatrix -s'
 alias lock='i3lock -c 000000 -n'
 alias vol='alsamixer'
@@ -31,4 +32,4 @@ alias gitl='git log --pretty=format:"%h - %an, %ar : %s " --reverse'
 alias gitp='git push -u origin --all'
 
 # Remote computers
-. ./.remote
+. ~/.remote
