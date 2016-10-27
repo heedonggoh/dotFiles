@@ -196,6 +196,8 @@ bindsym $mod+Shift+p exec i3lock -c 000000 -n
 bindsym $mod+n exec nautilus
 bindsym $mod+Shift+y exec redshift -t 3700:3700 # -g 0.5
 bindsym $mod+Shift+u exec pkill redshift
+bindsym $mod+q exec terminator -x alsamixer
+bindsym $mod+m exec terminator -x mutt
 
 # Start-Up Program
 exec /home/heedong/.config/i3/monitor.sh
