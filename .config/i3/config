@@ -50,8 +50,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec gnome-terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec gnome-terminal
+#bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -194,15 +194,18 @@ bindsym $mod+i exec /opt/google/chrome/google-chrome
 bindsym $mod+Shift+i exec /opt/google/chrome/google-chrome --incognito
 bindsym $mod+Shift+p exec i3lock -c 000000 -n
 bindsym $mod+n exec nautilus
-bindsym $mod+Shift+y exec redshift -t 3700:3700 # -g 0.5
+bindsym $mod+Shift+y exec redshift -l 30.267153:-97.743061 -t 5600:3400 # -g 0.5
 bindsym $mod+Shift+u exec pkill redshift
 bindsym $mod+q exec terminator -x alsamixer
 bindsym $mod+m exec terminator -x mutt
+bindsym $mod+c exec terminator -x mc ~/Documents
+bindsym $mod+z exec /opt/zotero/zotero
+bindsym $mod+Shift+s workspace 1; exec gnome-terminal; workspace 2; exec nautilus ; workspace 2; exec google-chrome
 
 # Start-Up Program
 exec /home/heedong/.config/i3/monitor.sh
-exec_always feh --bg-scale --no-xinerama /home/heedong/.config/i3/pictures/DSC00989.JPG
-exec_always redshift -t 3700:3700 # -g 0.5
+#exec_always feh --bg-scale --no-xinerama /home/heedong/.config/i3/pictures/DSC00989.JPG
+exec_always redshift -l 30.267153:-97.743061 -t 5600:3400 # -g 0.5
 
 # Widow Colors
 #                       border  background text    indicator
